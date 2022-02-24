@@ -7,8 +7,7 @@ def home():
     if request.method == 'GET':
         url=request.args['name']
         s=pyshorteners.Shortener()
-        shorter=s.tinyurl.short(url)
-        return shorter
+        return s.tinyurl.short(url)
 
     return render_template('home.html')
 
